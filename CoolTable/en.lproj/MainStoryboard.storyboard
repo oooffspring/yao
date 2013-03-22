@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FnL-rb-IF3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Add View Controller - 添加新饭-->
+        <scene sceneID="Hvb-Uh-Vtu">
+            <objects>
+                <viewController title="添加新饭" id="YOD-vX-axr" customClass="AddViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j42-hz-Vdj">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r90-V3-y60">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="输入要添加的饭的名字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjH-LW-7q3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="grQ-ot-bZy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <color key="textColor" red="0.79464285714285721" green="0.79464285714285721" blue="0.79464285714285721" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="选择要添加到哪一餐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaN-e5-ivo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ePO-pB-hZI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <color key="textColor" white="0.79356751820000004" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.15921532846715328" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r90-V3-y60" firstAttribute="leading" secondItem="j42-hz-Vdj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3gw-wU-PB8"/>
+                            <constraint firstItem="MjH-LW-7q3" firstAttribute="top" secondItem="j42-hz-Vdj" secondAttribute="top" constant="31" id="TeH-I8-rll"/>
+                            <constraint firstItem="FaN-e5-ivo" firstAttribute="top" secondItem="j42-hz-Vdj" secondAttribute="top" constant="136" id="Xrf-Bl-JQk"/>
+                            <constraint firstAttribute="trailing" secondItem="r90-V3-y60" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="iZX-RR-qjn"/>
+                            <constraint firstItem="FaN-e5-ivo" firstAttribute="leading" secondItem="j42-hz-Vdj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jdm-X9-0b6"/>
+                            <constraint firstAttribute="trailing" secondItem="MjH-LW-7q3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lQb-g9-YLQ"/>
+                            <constraint firstItem="r90-V3-y60" firstAttribute="top" secondItem="j42-hz-Vdj" secondAttribute="top" constant="66" id="q6G-v2-Lyp"/>
+                            <constraint firstItem="MjH-LW-7q3" firstAttribute="leading" secondItem="j42-hz-Vdj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sdY-fg-yPb"/>
+                            <constraint firstAttribute="trailing" secondItem="FaN-e5-ivo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="unY-yT-7rq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fe9-KP-0c1"/>
+                    <connections>
+                        <outlet property="mealName" destination="r90-V3-y60" id="FPp-hu-sgF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwe-Ma-YmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="77"/>
+        </scene>
+        <!--View Controller - Root View Controller-->
+        <scene sceneID="1AL-uJ-lpO">
+            <objects>
+                <tableViewController id="Bzs-gg-mEf" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="k8b-yd-JsV">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.16066947992700731" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="rjB-JZ-adT">
+                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="S0b-EB-bbt">
+                        <barButtonItem key="leftBarButtonItem" title="设置" id="100-5j-yMv">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hwA-4t-mNb">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="YOD-vX-axr" kind="push" identifier="addSegue" id="Wfo-0E-aXK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gn3-CL-dS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34" y="77"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i9V-8a-xht">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="FnL-rb-IF3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="ZgB-Nu-OJz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Bzs-gg-mEf" kind="relationship" relationship="rootViewController" id="Cia-LA-QH6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GRd-YN-SFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-406" y="69"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="AddViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneAdding:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mealName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
