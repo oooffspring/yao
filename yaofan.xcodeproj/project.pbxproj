@@ -44,7 +44,7 @@
 		F1931DC016A07BE100384015 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		F1931DC316A1494B00384015 /* CustomHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeader.h; sourceTree = "<group>"; };
 		F1931DC416A1494B00384015 /* CustomHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeader.m; sourceTree = "<group>"; };
-		F1D27BB8169FDD9500437BD0 /* 真摇饭.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "真摇饭.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D27BB8169FDD9500437BD0 /* 摇饭.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "摇饭.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D27BBC169FDD9500437BD0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F1D27BBE169FDD9500437BD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1D27BC0169FDD9500437BD0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,7 +111,7 @@
 		F1D27BB9169FDD9500437BD0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F1D27BB8169FDD9500437BD0 /* 真摇饭.app */,
+				F1D27BB8169FDD9500437BD0 /* 摇饭.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 			);
 			name = yaofan;
 			productName = CoolTable;
-			productReference = F1D27BB8169FDD9500437BD0 /* 真摇饭.app */;
+			productReference = F1D27BB8169FDD9500437BD0 /* 摇饭.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -335,8 +335,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoolTable/yaofan-Prefix.pch";
 				INFOPLIST_FILE = "CoolTable/yaofan-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "真摇饭";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "摇饭";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -348,8 +348,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoolTable/yaofan-Prefix.pch";
 				INFOPLIST_FILE = "CoolTable/yaofan-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "真摇饭";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "摇饭";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

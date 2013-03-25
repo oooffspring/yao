@@ -35,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.title = @"摇饭";
     //获取存储路径
     NSArray *directories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -55,6 +56,7 @@
     [self.myAccelerometer setDelegate:self];
 }
 
+//摇动出现结果页
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration{
     //静态变量 每一次执行这个函数的时候这个shakeCount的值都是上一次的值 常驻内存
     static NSInteger shakeCount = 0;
@@ -65,7 +67,8 @@
             resultViewController.comeBack = ^{
                 pushed = NO;
             };
-            [self.navigationController pushViewController:resultViewController animated:YES];
+            [self performSegueWithIdentifier:@"pushResult" sender:self.myAccelerometer];
+            //[self.navigationController pushViewController:resultViewController animated:YES];
             pushed = YES;
         }
     }
@@ -167,8 +170,31 @@
         AddViewController *addViewController = [segue destinationViewController];
         [addViewController setDelegate:self];
     }
+    else if ([segue.identifier isEqualToString:@"pushResult"]){
+        ResultViewController *resultViewController = [segue destinationViewController];
+        resultViewController.diskNameString = [self generateAMeal];
+    }
 }
 
+//随机生成一道菜
+- (NSString *)generateAMeal{
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *componet = [gregorian components:NSHourCalendarUnit fromDate:[NSDate date]];
+    NSInteger hour = [componet hour];
+    NSMutableArray *meal;
+    if (hour >= 0 && hour <= 9) {
+        meal = self.meals[0];
+    }
+    else if (hour >= 10 && hour <= 14){
+        meal = self.meals[1];
+    }
+    else{
+        meal = self.meals[2];
+    }
+    NSUInteger randomNumber = arc4random() % [meal count];
+    return meal[randomNumber];
+
+}
 //addDelegate方法
 - (void)addNewDisk:(NSString *)diskName forMeal:(NSInteger)meal{
     [((NSMutableArray *)(self.meals[meal])) addObject:diskName];

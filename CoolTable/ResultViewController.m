@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"摇饭结果";
+    self.diskName.text = self.diskNameString;
 	// Do any additional setup after loading the view.
 }
 
@@ -35,4 +37,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setDiskName:nil];
+    [super viewDidUnload];
+}
 @end

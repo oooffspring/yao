@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FnL-rb-IF3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FnL-rb-IF3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -12,39 +12,25 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r90-V3-y60">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="r90-V3-y60">
+                                <rect key="frame" x="20" y="66" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="输入要添加的饭的名字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjH-LW-7q3">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="grQ-ot-bZy"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="输入要添加的饭的名字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MjH-LW-7q3">
+                                <rect key="frame" x="20" y="31" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                 <color key="textColor" red="0.79464285714285721" green="0.79464285714285721" blue="0.79464285714285721" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="选择要添加到哪一餐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaN-e5-ivo">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="ePO-pB-hZI"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="选择要添加到哪一餐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FaN-e5-ivo">
+                                <rect key="frame" x="20" y="136" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                 <color key="textColor" white="0.79356751820000004" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.15921532846715328" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="r90-V3-y60" firstAttribute="leading" secondItem="j42-hz-Vdj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3gw-wU-PB8"/>
-                            <constraint firstItem="MjH-LW-7q3" firstAttribute="top" secondItem="j42-hz-Vdj" secondAttribute="top" constant="31" id="TeH-I8-rll"/>
-                            <constraint firstItem="FaN-e5-ivo" firstAttribute="top" secondItem="j42-hz-Vdj" secondAttribute="top" constant="136" id="Xrf-Bl-JQk"/>
-                            <constraint firstAttribute="trailing" secondItem="r90-V3-y60" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="iZX-RR-qjn"/>
-                            <constraint firstItem="FaN-e5-ivo" firstAttribute="leading" secondItem="j42-hz-Vdj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jdm-X9-0b6"/>
-                            <constraint firstAttribute="trailing" secondItem="MjH-LW-7q3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lQb-g9-YLQ"/>
-                            <constraint firstItem="r90-V3-y60" firstAttribute="top" secondItem="j42-hz-Vdj" secondAttribute="top" constant="66" id="q6G-v2-Lyp"/>
-                            <constraint firstItem="MjH-LW-7q3" firstAttribute="leading" secondItem="j42-hz-Vdj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sdY-fg-yPb"/>
-                            <constraint firstAttribute="trailing" secondItem="FaN-e5-ivo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="unY-yT-7rq"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fe9-KP-0c1"/>
                     <connections>
@@ -76,9 +62,6 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="S0b-EB-bbt">
-                        <barButtonItem key="leftBarButtonItem" title="设置" id="100-5j-yMv">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hwA-4t-mNb">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -86,10 +69,40 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="4AD-mY-OPx" kind="push" identifier="pushResult" id="aqK-pP-GlV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gn3-CL-dS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34" y="77"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="aWT-ul-MnZ">
+            <objects>
+                <viewController id="4AD-mY-OPx" customClass="ResultViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fpZ-mM-aSc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9sj-4i-v1O">
+                                <rect key="frame" x="20" y="58" width="280" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OVk-NR-bpG"/>
+                    <connections>
+                        <outlet property="diskName" destination="9sj-4i-v1O" id="VYk-J4-eKb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQA-gL-BXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34" y="734"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i9V-8a-xht">
@@ -107,21 +120,6 @@
             <point key="canvasLocation" x="-406" y="69"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AddViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneAdding:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mealName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

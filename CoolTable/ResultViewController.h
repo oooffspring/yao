@@ -11,5 +11,7 @@
 @interface ResultViewController : UIViewController
 
 @property (nonatomic, copy) void(^comeBack)(void);
+@property (strong, nonatomic) IBOutlet UILabel *diskName;
+@property (nonatomic, copy) NSString *diskNameString;
 
 @end
