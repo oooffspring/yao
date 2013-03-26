@@ -22,6 +22,8 @@
 @property (nonatomic,strong) UIActionSheet *myActionSheet;
 @property (nonatomic,copy) NSIndexPath *selectedIndex;
 @property (nonatomic,strong) UIAccelerometer *myAccelerometer;
+@property (nonatomic,copy) NSString *generatedString;
+@property (nonatomic) BOOL alertShowed;
 
 @end
 
@@ -62,19 +64,30 @@
     static NSInteger shakeCount = 0;
     if (fabsf(acceleration.x) > 1.7 || fabsf(acceleration.y) > 1.7 || fabsf(acceleration.z > 1.7)) {
         shakeCount ++;
-        if (shakeCount > 2 && pushed == NO) {
-            ResultViewController *resultViewController = [[ResultViewController alloc] init];
-            resultViewController.comeBack = ^{
-                pushed = NO;
-            };
-            [self performSegueWithIdentifier:@"pushResult" sender:self.myAccelerometer];
-            //[self.navigationController pushViewController:resultViewController animated:YES];
-            pushed = YES;
+        if (shakeCount > 3 && pushed == NO) {
+//            ResultViewController *resultViewController = [[ResultViewController alloc] init];
+//            resultViewController.comeBack = ^{
+//                pushed = NO;
+            self.generatedString = [self generateAMeal];
+            if ([self.generatedString isEqualToString:@""]) {
+                if (self.alertShowed != YES) {
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"现在还摇不出来哦！" message:@"请先在相应的类别里添加饭~" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                    [alertView show];
+                }
+                self.alertShowed = YES;
+            }
+            else{
+                [self performSegueWithIdentifier:@"pushResult" sender:self.myAccelerometer];
+                //[self.navigationController pushViewController:resultViewController animated:YES];
+                pushed = YES;
+            }
         }
     }
 }
 
-
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    self.alertShowed = NO;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -116,6 +129,7 @@
 //    [myTextField setTag:(indexPath.section * 10 + indexPath.row)];
 //    [cell addSubview:myTextField];
     cell.textLabel.text = [((NSMutableArray *)[self.meals objectAtIndex:indexPath.section])[indexPath.row] copy];
+    cell.textLabel.highlightedTextColor = [UIColor grayColor];
     cell.textLabel.backgroundColor = [UIColor clearColor];
     [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
     cell.backgroundView = [[CustomCellBackground alloc] initWithFrame:cell.backgroundView.bounds];
@@ -191,8 +205,13 @@
     else{
         meal = self.meals[2];
     }
-    NSUInteger randomNumber = arc4random() % [meal count];
-    return meal[randomNumber];
+    if ([meal count] == 0) {
+        return @"";
+    }
+    else{
+        NSUInteger randomNumber = arc4random() % [meal count];
+        return meal[randomNumber];
+    }
 
 }
 //addDelegate方法

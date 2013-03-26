@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F129F8D01702476800E41148 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F129F8CF1702476800E41148 /* BackgroundView.m */; };
+		F129F8D317025A8000E41148 /* wan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D117025A8000E41148 /* wan.jpg */; };
+		F129F8D417025A8000E41148 /* wan@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D217025A8000E41148 /* wan@2x.jpg */; };
 		F140F25216EB200C002DD370 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F140F25116EB200C002DD370 /* AddViewController.m */; };
 		F18DC99016F9AD0500AF40FF /* QBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC98F16F9AD0500AF40FF /* QBFlatButton.m */; };
 		F18DC99316F9ED8B00AF40FF /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC99216F9ED8B00AF40FF /* HMSegmentedControl.m */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		F129F8CE1702476800E41148 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
 		F129F8CF1702476800E41148 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		F129F8D117025A8000E41148 /* wan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wan.jpg; sourceTree = "<group>"; };
+		F129F8D217025A8000E41148 /* wan@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wan@2x.jpg"; sourceTree = "<group>"; };
 		F140F25016EB200C002DD370 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		F140F25116EB200C002DD370 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		F18DC98E16F9AD0500AF40FF /* QBFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBFlatButton.h; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 		F1D27BC3169FDD9500437BD0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F129F8D117025A8000E41148 /* wan.jpg */,
+				F129F8D217025A8000E41148 /* wan@2x.jpg */,
 				F18DC9CD16FB8A7600AF40FF /* iPhone_Icon_摇饭图标.png */,
 				F18DC9CB16FB8A6300AF40FF /* iPhoneRetina_Icon_摇饭图标.png */,
 				F1D27BC4169FDD9500437BD0 /* yaofan-Info.plist */,
@@ -239,6 +245,8 @@
 				F1D27BD6169FDD9500437BD0 /* MainStoryboard.storyboard in Resources */,
 				F18DC9CC16FB8A6300AF40FF /* iPhoneRetina_Icon_摇饭图标.png in Resources */,
 				F18DC9CE16FB8A7600AF40FF /* iPhone_Icon_摇饭图标.png in Resources */,
+				F129F8D317025A8000E41148 /* wan.jpg in Resources */,
+				F129F8D417025A8000E41148 /* wan@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

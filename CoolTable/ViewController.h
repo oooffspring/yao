@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AddViewController.h"
 
-@interface ViewController : UITableViewController<UITextFieldDelegate,addDelegate,UIActionSheetDelegate,UIAccelerometerDelegate>
+@interface ViewController : UITableViewController<UITextFieldDelegate,addDelegate,UIActionSheetDelegate,UIAccelerometerDelegate,UIAlertViewDelegate>
 
 @end

@@ -86,22 +86,27 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Xnd-Er-idB" customClass="BackgroundView">
-                                <rect key="frame" x="20" y="20" width="280" height="342"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="20" y="20" width="280" height="370"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="摇出来的饭就是：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RBG-Bm-XlM">
-                                        <rect key="frame" x="0.0" y="70" width="280" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="摇出来的饭就是" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RBG-Bm-XlM">
+                                        <rect key="frame" x="0.0" y="50" width="280" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="0.50139712589999996" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="wan.jpg" id="iun-np-6mt">
+                                        <rect key="frame" x="15" y="105" width="260" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9sj-4i-v1O">
-                                        <rect key="frame" x="0.0" y="134" width="280" height="73"/>
+                                        <rect key="frame" x="30" y="159" width="210" height="73"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="27"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="-1"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.16066947992700731" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -134,6 +139,9 @@
             <point key="canvasLocation" x="-406" y="69"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wan.jpg" width="300" height="169"/>
+    </resources>
     <classes>
         <class className="AddViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddViewController.h"/>

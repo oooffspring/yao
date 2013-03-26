@@ -41,7 +41,7 @@
     self.btn.margin = 4.0;
     self.btn.depth = 6.0;
     [self.btn.titleLabel setTextAlignment:NSTextAlignmentCenter];
-    [self.btn setTitle:@"请先输入饭名" forState:UIControlStateNormal];
+    [self.btn setTitle:@"输入饭名" forState:UIControlStateNormal];
     [self.btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btn addTarget:self action:@selector(doneAdding:) forControlEvents:UIControlEventTouchUpInside];
     self.btn.enabled = NO;
@@ -116,6 +116,7 @@
 }
 - (void)doneAdding:(id)sender {
     [self.delegate addNewDisk:self.mealName.text forMeal:self.mySegmentedControl.selectedIndex];
+    self.btn.titleLabel.text = @"跳转中...";
     [self.navigationController popViewControllerAnimated:YES];
 }
 
