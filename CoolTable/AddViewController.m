@@ -28,7 +28,7 @@
 
 - (void)viewDidLoad
 {
-    self.title = @"添加新饭";
+    self.title = @"添加之后摇一下~";
     [super viewDidLoad];
     self.mealName.delegate = self;
     

@@ -10,6 +10,9 @@
 		F129F8D01702476800E41148 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F129F8CF1702476800E41148 /* BackgroundView.m */; };
 		F129F8D317025A8000E41148 /* wan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D117025A8000E41148 /* wan.jpg */; };
 		F129F8D417025A8000E41148 /* wan@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D217025A8000E41148 /* wan@2x.jpg */; };
+		F129F8D61702783600E41148 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D51702783600E41148 /* Default-568h@2x.png */; };
+		F129F8D81702791A00E41148 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D71702791A00E41148 /* Default@2x.png */; };
+		F129F8DA1702792A00E41148 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D91702792A00E41148 /* Default.png */; };
 		F140F25216EB200C002DD370 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F140F25116EB200C002DD370 /* AddViewController.m */; };
 		F18DC99016F9AD0500AF40FF /* QBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC98F16F9AD0500AF40FF /* QBFlatButton.m */; };
 		F18DC99316F9ED8B00AF40FF /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC99216F9ED8B00AF40FF /* HMSegmentedControl.m */; };
@@ -38,6 +41,9 @@
 		F129F8CF1702476800E41148 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
 		F129F8D117025A8000E41148 /* wan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wan.jpg; sourceTree = "<group>"; };
 		F129F8D217025A8000E41148 /* wan@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wan@2x.jpg"; sourceTree = "<group>"; };
+		F129F8D51702783600E41148 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F129F8D71702791A00E41148 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F129F8D91702792A00E41148 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F140F25016EB200C002DD370 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		F140F25116EB200C002DD370 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		F18DC98E16F9AD0500AF40FF /* QBFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBFlatButton.h; sourceTree = "<group>"; };
@@ -109,6 +115,9 @@
 		F1D27BAD169FDD9500437BD0 = {
 			isa = PBXGroup;
 			children = (
+				F129F8D91702792A00E41148 /* Default.png */,
+				F129F8D71702791A00E41148 /* Default@2x.png */,
+				F129F8D51702783600E41148 /* Default-568h@2x.png */,
 				F1D27BC2169FDD9500437BD0 /* CoolTable */,
 				F1D27BBB169FDD9500437BD0 /* Frameworks */,
 				F1D27BB9169FDD9500437BD0 /* Products */,
@@ -247,6 +256,9 @@
 				F18DC9CE16FB8A7600AF40FF /* iPhone_Icon_摇饭图标.png in Resources */,
 				F129F8D317025A8000E41148 /* wan.jpg in Resources */,
 				F129F8D417025A8000E41148 /* wan@2x.jpg in Resources */,
+				F129F8D61702783600E41148 /* Default-568h@2x.png in Resources */,
+				F129F8D81702791A00E41148 /* Default@2x.png in Resources */,
+				F129F8DA1702792A00E41148 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

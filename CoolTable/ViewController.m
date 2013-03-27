@@ -24,6 +24,7 @@
 @property (nonatomic,strong) UIAccelerometer *myAccelerometer;
 @property (nonatomic,copy) NSString *generatedString;
 @property (nonatomic) BOOL alertShowed;
+@property (nonatomic) BOOL canPushResult;
 
 @end
 
@@ -32,6 +33,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     pushed = NO;
+    self.canPushResult = YES;
 }
 
 - (void)viewDidLoad
@@ -58,19 +60,19 @@
     [self.myAccelerometer setDelegate:self];
 }
 
+
 //摇动出现结果页
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration{
     //静态变量 每一次执行这个函数的时候这个shakeCount的值都是上一次的值 常驻内存
     static NSInteger shakeCount = 0;
     if (fabsf(acceleration.x) > 1.7 || fabsf(acceleration.y) > 1.7 || fabsf(acceleration.z > 1.7)) {
         shakeCount ++;
-        if (shakeCount > 3 && pushed == NO) {
-//            ResultViewController *resultViewController = [[ResultViewController alloc] init];
-//            resultViewController.comeBack = ^{
-//                pushed = NO;
+        if (shakeCount > 2 && pushed == NO && self.canPushResult == YES) {
             self.generatedString = [self generateAMeal];
-            if ([self.generatedString isEqualToString:@""]) {
-                if (self.alertShowed != YES) {
+            if ([self.generatedString isEqualToString:@""])
+            {
+                if (self.alertShowed != YES)
+                {
                     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"现在还摇不出来哦！" message:@"请先在相应的类别里添加饭~" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
                     [alertView show];
                 }
@@ -78,8 +80,8 @@
             }
             else{
                 [self performSegueWithIdentifier:@"pushResult" sender:self.myAccelerometer];
-                //[self.navigationController pushViewController:resultViewController animated:YES];
                 pushed = YES;
+                shakeCount = 0;
             }
         }
     }
@@ -92,7 +94,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -102,32 +103,10 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"cell%d",indexPath.section]];
-//    if (!cell) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[NSString stringWithFormat:@"cell%d",indexPath.section]];
-//    }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    //set cell's textfield's value
-//    NSString *entry;
-//    if (indexPath.section == 0) {
-//        entry = [_breakfast objectAtIndex:indexPath.row];
-//    }
-//    else if (indexPath.section == 1){
-//        entry = [_lunch objectAtIndex:indexPath.row];
-//    }
-//    else{
-//        entry = [_dinner objectAtIndex:indexPath.row];
-//    }
-//    UITextField *myTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 10, cell.bounds.size.width, cell.bounds.size.height - 10)];
-//    [myTextField setBackgroundColor:[UIColor clearColor]];
-//    myTextField.delegate = self;
-//    myTextField.text = [((NSMutableArray *)[self.meals objectAtIndex:indexPath.section])[indexPath.row] copy];
-//    [myTextField setTextAlignment:NSTextAlignmentCenter];
-//    [myTextField setTag:(indexPath.section * 10 + indexPath.row)];
-//    [cell addSubview:myTextField];
     cell.textLabel.text = [((NSMutableArray *)[self.meals objectAtIndex:indexPath.section])[indexPath.row] copy];
     cell.textLabel.highlightedTextColor = [UIColor grayColor];
     cell.textLabel.backgroundColor = [UIColor clearColor];
@@ -179,9 +158,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     //因为nsstring是指针，所以不能直接用==，要对对象调用方法
-    NSLog(@"yes");
     if ([segue.identifier isEqualToString:@"addSegue"]) {
         AddViewController *addViewController = [segue destinationViewController];
+        self.canPushResult = NO;
         [addViewController setDelegate:self];
     }
     else if ([segue.identifier isEqualToString:@"pushResult"]){
