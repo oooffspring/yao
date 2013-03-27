@@ -59,8 +59,6 @@
     
     [self.view addSubview:self.mySegmentedControl];
     [self.view addSubview:self.btn];
-
-	// Do any additional setup after loading the view.
 }
 
 - (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
@@ -106,7 +104,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewDidUnload {

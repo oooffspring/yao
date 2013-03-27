@@ -66,22 +66,19 @@
     //静态变量 每一次执行这个函数的时候这个shakeCount的值都是上一次的值 常驻内存
     static NSInteger shakeCount = 0;
     if (fabsf(acceleration.x) > 1.7 || fabsf(acceleration.y) > 1.7 || fabsf(acceleration.z > 1.7)) {
-        shakeCount ++;
-        if (shakeCount > 2 && pushed == NO && self.canPushResult == YES) {
-            self.generatedString = [self generateAMeal];
-            if ([self.generatedString isEqualToString:@""])
-            {
-                if (self.alertShowed != YES)
+            shakeCount ++;
+            if (shakeCount > 2 && pushed == NO && self.canPushResult == YES) {
+                self.generatedString = [self generateAMeal];
+                if ([self.generatedString isEqualToString:@""] && self.alertShowed != YES)
                 {
                     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"现在还摇不出来哦！" message:@"请先在相应的类别里添加饭~" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
                     [alertView show];
+                    self.alertShowed = YES;
                 }
-                self.alertShowed = YES;
-            }
-            else{
-                [self performSegueWithIdentifier:@"pushResult" sender:self.myAccelerometer];
-                pushed = YES;
-                shakeCount = 0;
+                else{
+                    [self performSegueWithIdentifier:@"pushResult" sender:self.myAccelerometer];
+                    pushed = YES;
+                    shakeCount = 0;
             }
         }
     }

@@ -54,7 +54,6 @@
     [[UIColor blackColor] setStroke];
     roundedRectanglePath.lineWidth = 2;
     [roundedRectanglePath stroke];
-	// Do any additional setup after loading the view.
 }
 
 -(void)doneShaking:(id)sender{
@@ -64,7 +63,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewDidUnload {
