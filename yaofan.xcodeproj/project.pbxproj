@@ -10,9 +10,9 @@
 		F129F8D01702476800E41148 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F129F8CF1702476800E41148 /* BackgroundView.m */; };
 		F129F8D317025A8000E41148 /* wan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D117025A8000E41148 /* wan.jpg */; };
 		F129F8D417025A8000E41148 /* wan@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D217025A8000E41148 /* wan@2x.jpg */; };
-		F129F8D61702783600E41148 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D51702783600E41148 /* Default-568h@2x.png */; };
-		F129F8D81702791A00E41148 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D71702791A00E41148 /* Default@2x.png */; };
-		F129F8DA1702792A00E41148 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D91702792A00E41148 /* Default.png */; };
+		F129F8DB17028F7900E41148 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D91702792A00E41148 /* Default.png */; };
+		F129F8DC17028F8300E41148 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D71702791A00E41148 /* Default@2x.png */; };
+		F129F8DD17028F8C00E41148 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D51702783600E41148 /* Default-568h@2x.png */; };
 		F140F25216EB200C002DD370 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F140F25116EB200C002DD370 /* AddViewController.m */; };
 		F18DC99016F9AD0500AF40FF /* QBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC98F16F9AD0500AF40FF /* QBFlatButton.m */; };
 		F18DC99316F9ED8B00AF40FF /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC99216F9ED8B00AF40FF /* HMSegmentedControl.m */; };
@@ -27,9 +27,6 @@
 		F1D27BC7169FDD9500437BD0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1D27BC5169FDD9500437BD0 /* InfoPlist.strings */; };
 		F1D27BC9169FDD9500437BD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D27BC8169FDD9500437BD0 /* main.m */; };
 		F1D27BCD169FDD9500437BD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D27BCC169FDD9500437BD0 /* AppDelegate.m */; };
-		F1D27BCF169FDD9500437BD0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D27BCE169FDD9500437BD0 /* Default.png */; };
-		F1D27BD1169FDD9500437BD0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D27BD0169FDD9500437BD0 /* Default@2x.png */; };
-		F1D27BD3169FDD9500437BD0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D27BD2169FDD9500437BD0 /* Default-568h@2x.png */; };
 		F1D27BD6169FDD9500437BD0 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D27BD4169FDD9500437BD0 /* MainStoryboard.storyboard */; };
 		F1D27BD9169FDD9500437BD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D27BD8169FDD9500437BD0 /* ViewController.m */; };
 		F1D27BE1169FEE4000437BD0 /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D27BE0169FEE4000437BD0 /* CustomCellBackground.m */; };
@@ -248,17 +245,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1D27BC7169FDD9500437BD0 /* InfoPlist.strings in Resources */,
-				F1D27BCF169FDD9500437BD0 /* Default.png in Resources */,
-				F1D27BD1169FDD9500437BD0 /* Default@2x.png in Resources */,
-				F1D27BD3169FDD9500437BD0 /* Default-568h@2x.png in Resources */,
 				F1D27BD6169FDD9500437BD0 /* MainStoryboard.storyboard in Resources */,
 				F18DC9CC16FB8A6300AF40FF /* iPhoneRetina_Icon_摇饭图标.png in Resources */,
 				F18DC9CE16FB8A7600AF40FF /* iPhone_Icon_摇饭图标.png in Resources */,
 				F129F8D317025A8000E41148 /* wan.jpg in Resources */,
 				F129F8D417025A8000E41148 /* wan@2x.jpg in Resources */,
-				F129F8D61702783600E41148 /* Default-568h@2x.png in Resources */,
-				F129F8D81702791A00E41148 /* Default@2x.png in Resources */,
-				F129F8DA1702792A00E41148 /* Default.png in Resources */,
+				F129F8DB17028F7900E41148 /* Default.png in Resources */,
+				F129F8DC17028F8300E41148 /* Default@2x.png in Resources */,
+				F129F8DD17028F8C00E41148 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,12 +352,17 @@
 		F1D27BDD169FDD9500437BD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoolTable/yaofan-Prefix.pch";
 				INFOPLIST_FILE = "CoolTable/yaofan-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "摇饭";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -371,12 +370,19 @@
 		F1D27BDE169FDD9500437BD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: XIE ZILONG";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: XIE ZILONG";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: XIE ZILONG";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoolTable/yaofan-Prefix.pch";
 				INFOPLIST_FILE = "CoolTable/yaofan-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "摇饭";
+				PROVISIONING_PROFILE = "1DE87466-E954-45D7-81F3-A8D010D911DB";
+				"PROVISIONING_PROFILE[sdk=*]" = "1DE87466-E954-45D7-81F3-A8D010D911DB";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1DE87466-E954-45D7-81F3-A8D010D911DB";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
