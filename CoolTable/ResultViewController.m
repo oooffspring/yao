@@ -57,7 +57,7 @@
 }
 
 -(void)doneShaking:(id)sender{
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning

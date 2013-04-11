@@ -65,6 +65,11 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="S0b-EB-bbt">
+                        <barButtonItem key="leftBarButtonItem" title="评分" id="OTG-aQ-cr5">
+                            <connections>
+                                <action selector="rate:" destination="Bzs-gg-mEf" id="zgd-ZU-ZAS"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hwA-4t-mNb">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -145,27 +150,6 @@
     <resources>
         <image name="wan.jpg" width="300" height="169"/>
     </resources>
-    <classes>
-        <class className="AddViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneAdding:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mealName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="BackgroundView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundView.h"/>
-        </class>
-        <class className="ResultViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="diskName" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

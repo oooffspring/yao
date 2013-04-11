@@ -114,7 +114,7 @@
 - (void)doneAdding:(id)sender {
     [self.delegate addNewDisk:self.mealName.text forMeal:self.mySegmentedControl.selectedIndex];
     self.btn.titleLabel.text = @"跳转中...";
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
