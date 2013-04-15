@@ -10,5 +10,6 @@
 #import "AddViewController.h"
 
 @interface ViewController : UITableViewController<UITextFieldDelegate,addDelegate,UIActionSheetDelegate,UIAccelerometerDelegate,UIAlertViewDelegate>
+- (IBAction)rate:(id)sender;
 
 @end

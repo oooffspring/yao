@@ -11,10 +11,10 @@
 #import "CustomCellBackground.h"
 #import "CustomHeader.h"
 #import "ResultViewController.h"
+#import "CloudReview.h"
 
 @interface ViewController (){
     NSString *_path;
-    BOOL pushed;
 }
 
 @property (nonatomic,strong) NSMutableArray *breakfast,*lunch,*dinner;
@@ -24,7 +24,9 @@
 @property (nonatomic,strong) UIAccelerometer *myAccelerometer;
 @property (nonatomic,copy) NSString *generatedString;
 @property (nonatomic) BOOL alertShowed;
-@property (nonatomic) BOOL canPushResult;
+@property (nonatomic) BOOL canPushResult;//能否push结果页的标注
+@property (nonatomic) BOOL actionSheetShowed;//actionSheet是否出现
+@property (nonatomic) BOOL viewDidAppear;
 
 @end
 
@@ -32,8 +34,20 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    pushed = NO;
     self.canPushResult = YES;
+    self.myActionSheet.hidden = NO;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.viewDidAppear = NO;
+}
+
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.viewDidAppear = YES;
+    
 }
 
 - (void)viewDidLoad
@@ -48,9 +62,9 @@
     
     self.meals = [NSKeyedUnarchiver unarchiveObjectWithFile:_path];
     if (self.meals.count == 0) {
-        self.breakfast = [[NSMutableArray alloc] initWithCapacity:100];
-        self.lunch = [[NSMutableArray alloc] initWithCapacity:100];
-        self.dinner = [[NSMutableArray alloc] initWithCapacity:100];
+        self.breakfast = [[NSMutableArray alloc] initWithObjects:@"豆浆油条",@"豆花",@"包子",@"三明治",@"煎蛋", nil];
+        self.lunch = [[NSMutableArray alloc] initWithObjects:@"鸡腿饭",@"老鸭粉丝汤",@"红烧肉",@"咖喱饭",@"汉堡", nil];
+        self.dinner = [[NSMutableArray alloc] initWithObjects:@"火锅",@"烧烤",@"海鲜",@"披萨",@"便当", nil];
         self.meals = [NSArray arrayWithObjects:self.breakfast,self.lunch,self.dinner,nil];
     }
 
@@ -67,7 +81,7 @@
     static NSInteger shakeCount = 0;
     if (fabsf(acceleration.x) > 1.7 || fabsf(acceleration.y) > 1.7 || fabsf(acceleration.z > 1.7)) {
             shakeCount ++;
-            if (shakeCount > 2 && pushed == NO && self.canPushResult == YES) {
+            if (shakeCount > 2  && self.canPushResult == YES && self.actionSheetShowed == NO) {
                 self.generatedString = [self generateAMeal];
                 if ([self.generatedString isEqualToString:@""] && self.alertShowed != YES)
                 {
@@ -76,8 +90,9 @@
                     self.alertShowed = YES;
                 }
                 else{
-                    [self performSegueWithIdentifier:@"pushResult" sender:self.myAccelerometer];
-                    pushed = YES;
+                    if (self.viewDidAppear == YES) {
+                        [self performSegueWithIdentifier:@"pushResult" sender:self.myAccelerometer];
+                    }
                     shakeCount = 0;
             }
         }
@@ -96,6 +111,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.selectedIndex = indexPath;
     [self.myActionSheet showInView:self.view];
+    self.actionSheetShowed = YES;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -145,6 +161,7 @@
         [NSKeyedArchiver archiveRootObject:self.meals toFile:_path];
         [self.tableView reloadData];
     }
+    self.actionSheetShowed = NO;
 }
 
 
@@ -157,6 +174,7 @@
     //因为nsstring是指针，所以不能直接用==，要对对象调用方法
     if ([segue.identifier isEqualToString:@"addSegue"]) {
         AddViewController *addViewController = [segue destinationViewController];
+        //push之前要先把canPuhsResult设定为NO，防止推出之后还在检测摇动事件
         self.canPushResult = NO;
         [addViewController setDelegate:self];
     }
@@ -214,5 +232,8 @@
         header.darkColor = [UIColor colorWithRed:180.0/255.0 green:0.0/0.0 blue:0.0/0.0 alpha:1.0];
     }
     return header;
+}
+- (IBAction)rate:(id)sender {
+    [[CloudReview sharedReview] reviewFor:627198697];
 }
 @end

@@ -31,6 +31,8 @@
 		F1D27BD9169FDD9500437BD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D27BD8169FDD9500437BD0 /* ViewController.m */; };
 		F1D27BE1169FEE4000437BD0 /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D27BE0169FEE4000437BD0 /* CustomCellBackground.m */; };
 		F1E87BB916FC391A00ECC3DC /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E87BB816FC391A00ECC3DC /* ResultViewController.m */; };
+		F1F8F3591713204700F4AADE /* CloudReview.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F8F3581713204700F4AADE /* CloudReview.m */; };
+		F1F8F35B171344E800F4AADE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F8F35A171344E700F4AADE /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,9 @@
 		F1D27BE0169FEE4000437BD0 /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBackground.m; sourceTree = "<group>"; };
 		F1E87BB716FC391A00ECC3DC /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		F1E87BB816FC391A00ECC3DC /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		F1F8F3571713204700F4AADE /* CloudReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudReview.h; sourceTree = "<group>"; };
+		F1F8F3581713204700F4AADE /* CloudReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudReview.m; sourceTree = "<group>"; };
+		F1F8F35A171344E700F4AADE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F8F35B171344E800F4AADE /* AudioToolbox.framework in Frameworks */,
 				F18DC99616F9F1F500AF40FF /* QuartzCore.framework in Frameworks */,
 				F1D27BBD169FDD9500437BD0 /* UIKit.framework in Frameworks */,
 				F1D27BBF169FDD9500437BD0 /* Foundation.framework in Frameworks */,
@@ -112,6 +118,7 @@
 		F1D27BAD169FDD9500437BD0 = {
 			isa = PBXGroup;
 			children = (
+				F1F8F35A171344E700F4AADE /* AudioToolbox.framework */,
 				F129F8D91702792A00E41148 /* Default.png */,
 				F129F8D71702791A00E41148 /* Default@2x.png */,
 				F129F8D51702783600E41148 /* Default-568h@2x.png */,
@@ -189,6 +196,8 @@
 				F1931DC016A07BE100384015 /* Common.m */,
 				F1931DC316A1494B00384015 /* CustomHeader.h */,
 				F1931DC416A1494B00384015 /* CustomHeader.m */,
+				F1F8F3571713204700F4AADE /* CloudReview.h */,
+				F1F8F3581713204700F4AADE /* CloudReview.m */,
 			);
 			name = CustomView;
 			sourceTree = "<group>";
@@ -274,6 +283,7 @@
 				F18DC99316F9ED8B00AF40FF /* HMSegmentedControl.m in Sources */,
 				F1E87BB916FC391A00ECC3DC /* ResultViewController.m in Sources */,
 				F129F8D01702476800E41148 /* BackgroundView.m in Sources */,
+				F1F8F3591713204700F4AADE /* CloudReview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,15 +362,15 @@
 		F1D27BDD169FDD9500437BD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: this what (4DLRW8DZT6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: this what (4DLRW8DZT6)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoolTable/yaofan-Prefix.pch";
 				INFOPLIST_FILE = "CoolTable/yaofan-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "摇饭";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "56F9DECA-179F-4C10-A847-75AE808D65A3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "56F9DECA-179F-4C10-A847-75AE808D65A3";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;

@@ -65,6 +65,11 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="S0b-EB-bbt">
+                        <barButtonItem key="leftBarButtonItem" title="评分" id="OTG-aQ-cr5">
+                            <connections>
+                                <action selector="rate:" destination="Bzs-gg-mEf" id="zgd-ZU-ZAS"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hwA-4t-mNb">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -164,6 +169,9 @@
         </class>
         <class className="ViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="rate:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
