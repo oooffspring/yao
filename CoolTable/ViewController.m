@@ -26,7 +26,6 @@
 @property (nonatomic) BOOL alertShowed;
 @property (nonatomic) BOOL canPushResult;//能否push结果页的标注
 @property (nonatomic) BOOL actionSheetShowed;//actionSheet是否出现
-@property (nonatomic) BOOL pushed;
 @property (nonatomic) BOOL viewDidAppear;
 
 @end
@@ -35,7 +34,6 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.pushed = NO;
     self.canPushResult = YES;
     self.myActionSheet.hidden = NO;
 }
@@ -83,7 +81,7 @@
     static NSInteger shakeCount = 0;
     if (fabsf(acceleration.x) > 1.7 || fabsf(acceleration.y) > 1.7 || fabsf(acceleration.z > 1.7)) {
             shakeCount ++;
-            if (shakeCount > 2 && self.pushed == NO && self.canPushResult == YES && self.actionSheetShowed == NO) {
+            if (shakeCount > 2  && self.canPushResult == YES && self.actionSheetShowed == NO) {
                 self.generatedString = [self generateAMeal];
                 if ([self.generatedString isEqualToString:@""] && self.alertShowed != YES)
                 {
@@ -94,7 +92,6 @@
                 else{
                     if (self.viewDidAppear == YES) {
                         [self performSegueWithIdentifier:@"pushResult" sender:self.myAccelerometer];
-                        self.pushed = YES;
                     }
                     shakeCount = 0;
             }

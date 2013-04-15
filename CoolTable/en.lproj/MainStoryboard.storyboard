@@ -150,6 +150,30 @@
     <resources>
         <image name="wan.jpg" width="300" height="169"/>
     </resources>
+    <classes>
+        <class className="AddViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneAdding:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mealName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="BackgroundView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundView.h"/>
+        </class>
+        <class className="ResultViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="diskName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="rate:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
