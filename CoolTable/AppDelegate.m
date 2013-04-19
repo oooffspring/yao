@@ -13,8 +13,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.appKey = kDPAppKey;
+    self.appSecret = kDPAppSecret;
     return YES;
 }
+
++ (AppDelegate *)instance {
+	return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
+- (id)init {
+	self = [super init];
+    if (self) {
+        _dpapi = [[DPAPI alloc] init];
+    }
+    return self;
+}
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
