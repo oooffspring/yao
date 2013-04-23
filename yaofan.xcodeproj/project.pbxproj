@@ -50,6 +50,7 @@
 		F1F0D5971721103000438331 /* ShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F0D5961721103000438331 /* ShakeViewController.m */; };
 		F1F0D59A1721105100438331 /* LocationResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F0D5991721105100438331 /* LocationResultViewController.m */; };
 		F1F0D5A01721139100438331 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F0D59F1721139100438331 /* SettingViewController.m */; };
+		F1F0D5A21721A17000438331 /* ico_deco_shake.png in Resources */ = {isa = PBXBuildFile; fileRef = F1F0D5A11721A17000438331 /* ico_deco_shake.png */; };
 		F1F8F3591713204700F4AADE /* CloudReview.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F8F3581713204700F4AADE /* CloudReview.m */; };
 		F1F8F35B171344E800F4AADE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F8F35A171344E700F4AADE /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
@@ -134,6 +135,7 @@
 		F1F0D5991721105100438331 /* LocationResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationResultViewController.m; sourceTree = "<group>"; };
 		F1F0D59E1721139100438331 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = ../SettingViewController.h; sourceTree = "<group>"; };
 		F1F0D59F1721139100438331 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = ../SettingViewController.m; sourceTree = "<group>"; };
+		F1F0D5A11721A17000438331 /* ico_deco_shake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_deco_shake.png; sourceTree = "<group>"; };
 		F1F8F3571713204700F4AADE /* CloudReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudReview.h; sourceTree = "<group>"; };
 		F1F8F3581713204700F4AADE /* CloudReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudReview.m; sourceTree = "<group>"; };
 		F1F8F35A171344E700F4AADE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -234,6 +236,7 @@
 		F1424AA8171D292000235A96 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F1F0D5A11721A17000438331 /* ico_deco_shake.png */,
 				F129F8D51702783600E41148 /* Default-568h@2x.png */,
 				F129F8D71702791A00E41148 /* Default@2x.png */,
 				F129F8D91702792A00E41148 /* Default.png */,
@@ -400,6 +403,7 @@
 				F129F8DB17028F7900E41148 /* Default.png in Resources */,
 				F129F8DC17028F8300E41148 /* Default@2x.png in Resources */,
 				F129F8DD17028F8C00E41148 /* Default-568h@2x.png in Resources */,
+				F1F0D5A21721A17000438331 /* ico_deco_shake.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

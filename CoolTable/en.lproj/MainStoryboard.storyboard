@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwe-Ma-YmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="529" y="-283"/>
+            <point key="canvasLocation" x="480" y="-543"/>
         </scene>
         <!--View Controller - Root View Controller-->
         <scene sceneID="1AL-uJ-lpO">
@@ -149,7 +149,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQA-gL-BXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="523" y="395"/>
+            <point key="canvasLocation" x="480" y="69"/>
+        </scene>
+        <!--Shake View Controller-->
+        <scene sceneID="MHM-Vd-rPD">
+            <objects>
+                <viewController id="mIe-lg-AMI" customClass="ShakeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SDO-XF-6vS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ico_deco_shake.png" id="wM4-DZ-DPI">
+                                <rect key="frame" x="80" y="109" width="279" height="266"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8xy-4t-xJx"/>
+                    <connections>
+                        <segue destination="3VA-2r-k62" kind="push" id="CgQ-pK-Yqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rFs-aj-cQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="724"/>
+        </scene>
+        <!--Location Result View Controller-->
+        <scene sceneID="5u2-9N-bl0">
+            <objects>
+                <viewController id="3VA-2r-k62" customClass="LocationResultViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6AI-hv-q7y">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZaU-I0-cn2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAY-bo-qwQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="724"/>
         </scene>
         <!--Navigation Controller - 摇饭饭-->
         <scene sceneID="i9V-8a-xht">
@@ -172,7 +211,9 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="qlw-U0-MGY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="设置" id="O7d-Jc-q6b"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8cq-3l-uD6">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="8cq-3l-uD6">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -245,7 +286,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMi-k6-HFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13" y="1372"/>
+            <point key="canvasLocation" x="34" y="1372"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hrf-Nf-a5U">
@@ -260,14 +301,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgn-WM-JFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="452" y="1372"/>
+            <point key="canvasLocation" x="480" y="1372"/>
         </scene>
         <!--Navigation Controller - 摇周边-->
         <scene sceneID="aWw-3O-A2t">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Kvq-qG-khz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="摇周边" id="l8k-GA-suN"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7us-7n-dVV">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="7us-7n-dVV">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -299,6 +342,7 @@
                                 </state>
                                 <connections>
                                     <action selector="sendRequest:" destination="Vxy-fO-nx9" eventType="touchUpInside" id="ctN-XZ-xTf"/>
+                                    <segue destination="mIe-lg-AMI" kind="push" id="0HL-fm-uYw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -308,45 +352,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBQ-Kv-gct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13" y="725"/>
+            <point key="canvasLocation" x="34" y="724"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ico_deco_shake.png" width="270" height="270"/>
         <image name="wan.jpg" width="300" height="169"/>
     </resources>
-    <classes>
-        <class className="AddViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneAdding:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mealName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="BackgroundView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundView.h"/>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sendRequest:"/>
-            </relationships>
-        </class>
-        <class className="ResultViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="diskName" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SettingViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
-        </class>
-        <class className="ViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="rate:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

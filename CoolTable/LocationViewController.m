@@ -66,23 +66,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+//- (IBAction)sendRequest:(id)sender {
+//    NSString *url = @"v1/business/find_businesses";
+//    //NSString *params = [NSString stringWithFormat:@"city=北京&region=海淀区&category=火锅&has_coupon=1&sort=2&limit=20"];
+//    NSString *params = [NSString stringWithFormat:@"latitude=%f&longitude=%f&category=火锅&sort=2&limit=20",self.location.coordinate.latitude,self.location.coordinate.longitude];
+//    [[[AppDelegate instance] dpapi] requestWithURL:url paramsString:params delegate:self];
+//}
+
 - (IBAction)sendRequest:(id)sender {
-    NSString *url = @"v1/business/find_businesses";
+    NSString *url = @"v1/metadata/get_categories_with_businesses";
     //NSString *params = [NSString stringWithFormat:@"city=北京&region=海淀区&category=火锅&has_coupon=1&sort=2&limit=20"];
-    NSString *params = [NSString stringWithFormat:@"latitude=%f&longitude=%f&category=火锅&sort=2&limit=20",self.location.coordinate.latitude,self.location.coordinate.longitude];
-    [[[AppDelegate instance] dpapi] requestWithURL:url paramsString:params delegate:self];
+    //NSString *params = [NSString stringWithFormat:@"latitude=%f&longitude=%f&category=火锅&sort=2&limit=20",self.location.coordinate.latitude,self.location.coordinate.longitude];
+    [[[AppDelegate instance] dpapi] requestWithURL:url paramsString:nil delegate:self];
 }
 
 - (void)request:(DPRequest *)request didFailWithError:(NSError *)error {
     NSLog(@"%@",error);
 }
 
+//- (void)request:(DPRequest *)request didFinishLoadingWithResult:(id)result {
+//    NSArray *array = [(NSDictionary*)result objectForKey:@"businesses"];
+//    NSDictionary *oneBusiness = array[1];
+//    NSString *businessName = [oneBusiness objectForKey:@"name"];
+//    NSLog(@"%@",businessName);
+//}
 - (void)request:(DPRequest *)request didFinishLoadingWithResult:(id)result {
-    NSArray *array = [(NSDictionary*)result objectForKey:@"businesses"];
-    NSDictionary *oneBusiness = array[1];
-    NSString *businessName = [oneBusiness objectForKey:@"name"];
-    NSLog(@"%@",businessName);
+    NSLog(@"%@",result);
 }
+
 - (void)viewDidUnload {
     [super viewDidUnload];
 }
