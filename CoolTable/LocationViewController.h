@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "DPAPI.h"
+#import "AibangApi.h"
 
-@interface LocationViewController : UIViewController<CLLocationManagerDelegate,DPRequestDelegate>
+@interface LocationViewController : UIViewController<CLLocationManagerDelegate>{
+    AibangApi *api;
+}
 
 - (IBAction)sendRequest:(id)sender;
 
