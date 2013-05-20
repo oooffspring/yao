@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F11FF5F2171D45A9006B293D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11FF5F1171D45A9006B293D /* CoreLocation.framework */; };
+		F125C37D1729251F00DB0FA0 /* NewRelicAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F125C37C1729251F00DB0FA0 /* NewRelicAgent.framework */; };
+		F125C3A8173585F000DB0FA0 /* libAibangApi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F125C3A7173585F000DB0FA0 /* libAibangApi.a */; };
 		F129F8D01702476800E41148 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F129F8CF1702476800E41148 /* BackgroundView.m */; };
 		F129F8D317025A8000E41148 /* wan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D117025A8000E41148 /* wan.jpg */; };
 		F129F8D417025A8000E41148 /* wan@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D217025A8000E41148 /* wan@2x.jpg */; };
@@ -14,6 +17,7 @@
 		F129F8DC17028F8300E41148 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D71702791A00E41148 /* Default@2x.png */; };
 		F129F8DD17028F8C00E41148 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F129F8D51702783600E41148 /* Default-568h@2x.png */; };
 		F140F25216EB200C002DD370 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F140F25116EB200C002DD370 /* AddViewController.m */; };
+		F1424AAB171D295D00235A96 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1424AAA171D295D00235A96 /* LocationViewController.m */; };
 		F18DC99016F9AD0500AF40FF /* QBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC98F16F9AD0500AF40FF /* QBFlatButton.m */; };
 		F18DC99316F9ED8B00AF40FF /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DC99216F9ED8B00AF40FF /* HMSegmentedControl.m */; };
 		F18DC99616F9F1F500AF40FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18DC99516F9F1F500AF40FF /* QuartzCore.framework */; };
@@ -21,6 +25,9 @@
 		F18DC9CE16FB8A7600AF40FF /* iPhone_Icon_摇饭图标.png in Resources */ = {isa = PBXBuildFile; fileRef = F18DC9CD16FB8A7600AF40FF /* iPhone_Icon_摇饭图标.png */; };
 		F1931DC116A07BE100384015 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = F1931DC016A07BE100384015 /* Common.m */; };
 		F1931DC516A1494B00384015 /* CustomHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F1931DC416A1494B00384015 /* CustomHeader.m */; };
+		F1C248A6174382E9002916E1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F125C37E1729255200DB0FA0 /* CoreTelephony.framework */; };
+		F1C248A7174382F4002916E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F125C3801729255B00DB0FA0 /* SystemConfiguration.framework */; };
+		F1C248A8174382FE002916E1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F125C3821729256500DB0FA0 /* libz.dylib */; };
 		F1D27BBD169FDD9500437BD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D27BBC169FDD9500437BD0 /* UIKit.framework */; };
 		F1D27BBF169FDD9500437BD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D27BBE169FDD9500437BD0 /* Foundation.framework */; };
 		F1D27BC1169FDD9500437BD0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D27BC0169FDD9500437BD0 /* CoreGraphics.framework */; };
@@ -31,11 +38,23 @@
 		F1D27BD9169FDD9500437BD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D27BD8169FDD9500437BD0 /* ViewController.m */; };
 		F1D27BE1169FEE4000437BD0 /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D27BE0169FEE4000437BD0 /* CustomCellBackground.m */; };
 		F1E87BB916FC391A00ECC3DC /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E87BB816FC391A00ECC3DC /* ResultViewController.m */; };
+		F1F0D5971721103000438331 /* ShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F0D5961721103000438331 /* ShakeViewController.m */; };
+		F1F0D59A1721105100438331 /* LocationResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F0D5991721105100438331 /* LocationResultViewController.m */; };
+		F1F0D5A01721139100438331 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F0D59F1721139100438331 /* SettingViewController.m */; };
+		F1F0D5A21721A17000438331 /* ico_deco_shake.png in Resources */ = {isa = PBXBuildFile; fileRef = F1F0D5A11721A17000438331 /* ico_deco_shake.png */; };
 		F1F8F3591713204700F4AADE /* CloudReview.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F8F3581713204700F4AADE /* CloudReview.m */; };
 		F1F8F35B171344E800F4AADE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F8F35A171344E700F4AADE /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F11FF5F1171D45A9006B293D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F125C37C1729251F00DB0FA0 /* NewRelicAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewRelicAgent.framework; sourceTree = "<group>"; };
+		F125C37E1729255200DB0FA0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F125C3801729255B00DB0FA0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F125C3821729256500DB0FA0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F125C3A41733B7F300DB0FA0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F125C3A6173585F000DB0FA0 /* AibangApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AibangApi.h; path = ../AibangApi.h; sourceTree = "<group>"; };
+		F125C3A7173585F000DB0FA0 /* libAibangApi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAibangApi.a; path = ../libAibangApi.a; sourceTree = "<group>"; };
 		F129F8CE1702476800E41148 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
 		F129F8CF1702476800E41148 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
 		F129F8D117025A8000E41148 /* wan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wan.jpg; sourceTree = "<group>"; };
@@ -45,6 +64,8 @@
 		F129F8D91702792A00E41148 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F140F25016EB200C002DD370 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		F140F25116EB200C002DD370 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		F1424AA9171D295D00235A96 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		F1424AAA171D295D00235A96 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		F18DC98E16F9AD0500AF40FF /* QBFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBFlatButton.h; sourceTree = "<group>"; };
 		F18DC98F16F9AD0500AF40FF /* QBFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBFlatButton.m; sourceTree = "<group>"; };
 		F18DC99116F9ED8B00AF40FF /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
@@ -76,6 +97,13 @@
 		F1D27BE0169FEE4000437BD0 /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBackground.m; sourceTree = "<group>"; };
 		F1E87BB716FC391A00ECC3DC /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		F1E87BB816FC391A00ECC3DC /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		F1F0D5951721103000438331 /* ShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeViewController.h; sourceTree = "<group>"; };
+		F1F0D5961721103000438331 /* ShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeViewController.m; sourceTree = "<group>"; };
+		F1F0D5981721105100438331 /* LocationResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationResultViewController.h; sourceTree = "<group>"; };
+		F1F0D5991721105100438331 /* LocationResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationResultViewController.m; sourceTree = "<group>"; };
+		F1F0D59E1721139100438331 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = ../SettingViewController.h; sourceTree = "<group>"; };
+		F1F0D59F1721139100438331 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = ../SettingViewController.m; sourceTree = "<group>"; };
+		F1F0D5A11721A17000438331 /* ico_deco_shake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_deco_shake.png; sourceTree = "<group>"; };
 		F1F8F3571713204700F4AADE /* CloudReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudReview.h; sourceTree = "<group>"; };
 		F1F8F3581713204700F4AADE /* CloudReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudReview.m; sourceTree = "<group>"; };
 		F1F8F35A171344E700F4AADE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -86,17 +114,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C248A8174382FE002916E1 /* libz.dylib in Frameworks */,
+				F1C248A7174382F4002916E1 /* SystemConfiguration.framework in Frameworks */,
+				F1C248A6174382E9002916E1 /* CoreTelephony.framework in Frameworks */,
+				F11FF5F2171D45A9006B293D /* CoreLocation.framework in Frameworks */,
 				F1F8F35B171344E800F4AADE /* AudioToolbox.framework in Frameworks */,
 				F18DC99616F9F1F500AF40FF /* QuartzCore.framework in Frameworks */,
 				F1D27BBD169FDD9500437BD0 /* UIKit.framework in Frameworks */,
 				F1D27BBF169FDD9500437BD0 /* Foundation.framework in Frameworks */,
 				F1D27BC1169FDD9500437BD0 /* CoreGraphics.framework in Frameworks */,
+				F125C37D1729251F00DB0FA0 /* NewRelicAgent.framework in Frameworks */,
+				F125C3A8173585F000DB0FA0 /* libAibangApi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1424AA6171D27E200235A96 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1E87BB716FC391A00ECC3DC /* ResultViewController.h */,
+				F1E87BB816FC391A00ECC3DC /* ResultViewController.m */,
+				F1D27BD7169FDD9500437BD0 /* ViewController.h */,
+				F1D27BD8169FDD9500437BD0 /* ViewController.m */,
+				F140F25016EB200C002DD370 /* AddViewController.h */,
+				F140F25116EB200C002DD370 /* AddViewController.m */,
+				F1424AA9171D295D00235A96 /* LocationViewController.h */,
+				F1424AAA171D295D00235A96 /* LocationViewController.m */,
+				F1F0D5951721103000438331 /* ShakeViewController.h */,
+				F1F0D5961721103000438331 /* ShakeViewController.m */,
+				F1F0D5981721105100438331 /* LocationResultViewController.h */,
+				F1F0D5991721105100438331 /* LocationResultViewController.m */,
+				F1F0D59E1721139100438331 /* SettingViewController.h */,
+				F1F0D59F1721139100438331 /* SettingViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F1424AA7171D281100235A96 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				F125C3A7173585F000DB0FA0 /* libAibangApi.a */,
+				F125C3A6173585F000DB0FA0 /* AibangApi.h */,
+				F18DC98D16F9ACEF00AF40FF /* QBFlatButton */,
+				F18DC99416F9ED9300AF40FF /* HMSegmentedControl */,
+			);
+			name = 3rdParty;
+			sourceTree = "<group>";
+		};
+		F1424AA8171D292000235A96 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F1F0D5A11721A17000438331 /* ico_deco_shake.png */,
+				F129F8D51702783600E41148 /* Default-568h@2x.png */,
+				F129F8D71702791A00E41148 /* Default@2x.png */,
+				F129F8D91702792A00E41148 /* Default.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		F18DC98D16F9ACEF00AF40FF /* QBFlatButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,10 +195,7 @@
 		F1D27BAD169FDD9500437BD0 = {
 			isa = PBXGroup;
 			children = (
-				F1F8F35A171344E700F4AADE /* AudioToolbox.framework */,
-				F129F8D91702792A00E41148 /* Default.png */,
-				F129F8D71702791A00E41148 /* Default@2x.png */,
-				F129F8D51702783600E41148 /* Default-568h@2x.png */,
+				F1424AA8171D292000235A96 /* Images */,
 				F1D27BC2169FDD9500437BD0 /* CoolTable */,
 				F1D27BBB169FDD9500437BD0 /* Frameworks */,
 				F1D27BB9169FDD9500437BD0 /* Products */,
@@ -139,6 +213,13 @@
 		F1D27BBB169FDD9500437BD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F125C3A41733B7F300DB0FA0 /* MobileCoreServices.framework */,
+				F125C3821729256500DB0FA0 /* libz.dylib */,
+				F125C3801729255B00DB0FA0 /* SystemConfiguration.framework */,
+				F125C37E1729255200DB0FA0 /* CoreTelephony.framework */,
+				F125C37C1729251F00DB0FA0 /* NewRelicAgent.framework */,
+				F11FF5F1171D45A9006B293D /* CoreLocation.framework */,
+				F1F8F35A171344E700F4AADE /* AudioToolbox.framework */,
 				F18DC99516F9F1F500AF40FF /* QuartzCore.framework */,
 				F1D27BBC169FDD9500437BD0 /* UIKit.framework */,
 				F1D27BBE169FDD9500437BD0 /* Foundation.framework */,
@@ -150,20 +231,12 @@
 		F1D27BC2169FDD9500437BD0 /* CoolTable */ = {
 			isa = PBXGroup;
 			children = (
+				F1424AA6171D27E200235A96 /* ViewControllers */,
+				F1424AA7171D281100235A96 /* 3rdParty */,
 				F1E87BB616FC38CB00ECC3DC /* CustomView */,
-				F18DC99416F9ED9300AF40FF /* HMSegmentedControl */,
-				F18DC98D16F9ACEF00AF40FF /* QBFlatButton */,
 				F1D27BCB169FDD9500437BD0 /* AppDelegate.h */,
 				F1D27BCC169FDD9500437BD0 /* AppDelegate.m */,
 				F1D27BD4169FDD9500437BD0 /* MainStoryboard.storyboard */,
-				F129F8CE1702476800E41148 /* BackgroundView.h */,
-				F129F8CF1702476800E41148 /* BackgroundView.m */,
-				F140F25016EB200C002DD370 /* AddViewController.h */,
-				F140F25116EB200C002DD370 /* AddViewController.m */,
-				F1E87BB716FC391A00ECC3DC /* ResultViewController.h */,
-				F1E87BB816FC391A00ECC3DC /* ResultViewController.m */,
-				F1D27BD7169FDD9500437BD0 /* ViewController.h */,
-				F1D27BD8169FDD9500437BD0 /* ViewController.m */,
 				F1D27BC3169FDD9500437BD0 /* Supporting Files */,
 			);
 			path = CoolTable;
@@ -190,6 +263,8 @@
 		F1E87BB616FC38CB00ECC3DC /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				F129F8CE1702476800E41148 /* BackgroundView.h */,
+				F129F8CF1702476800E41148 /* BackgroundView.m */,
 				F1D27BDF169FEE4000437BD0 /* CustomCellBackground.h */,
 				F1D27BE0169FEE4000437BD0 /* CustomCellBackground.m */,
 				F1931DBF16A07BE100384015 /* Common.h */,
@@ -262,6 +337,7 @@
 				F129F8DB17028F7900E41148 /* Default.png in Resources */,
 				F129F8DC17028F8300E41148 /* Default@2x.png in Resources */,
 				F129F8DD17028F8C00E41148 /* Default-568h@2x.png in Resources */,
+				F1F0D5A21721A17000438331 /* ico_deco_shake.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +360,10 @@
 				F1E87BB916FC391A00ECC3DC /* ResultViewController.m in Sources */,
 				F129F8D01702476800E41148 /* BackgroundView.m in Sources */,
 				F1F8F3591713204700F4AADE /* CloudReview.m in Sources */,
+				F1424AAB171D295D00235A96 /* LocationViewController.m in Sources */,
+				F1F0D5971721103000438331 /* ShakeViewController.m in Sources */,
+				F1F0D59A1721105100438331 /* LocationResultViewController.m in Sources */,
+				F1F0D5A01721139100438331 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,10 +444,19 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: this what (4DLRW8DZT6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: this what (4DLRW8DZT6)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoolTable/yaofan-Prefix.pch";
 				INFOPLIST_FILE = "CoolTable/yaofan-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/CoolTable\"",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "摇饭";
 				PROVISIONING_PROFILE = "56F9DECA-179F-4C10-A847-75AE808D65A3";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "56F9DECA-179F-4C10-A847-75AE808D65A3";
@@ -383,10 +472,19 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: XIE ZILONG";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: XIE ZILONG";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: XIE ZILONG";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoolTable/yaofan-Prefix.pch";
 				INFOPLIST_FILE = "CoolTable/yaofan-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/CoolTable\"",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "摇饭";
 				PROVISIONING_PROFILE = "1DE87466-E954-45D7-81F3-A8D010D911DB";
 				"PROVISIONING_PROFILE[sdk=*]" = "1DE87466-E954-45D7-81F3-A8D010D911DB";

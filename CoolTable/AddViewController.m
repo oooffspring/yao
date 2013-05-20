@@ -34,7 +34,7 @@
     
     //自定义按钮
     self.btn = [QBFlatButton buttonWithType:UIButtonTypeCustom];
-    self.btn.frame = CGRectMake(60, 290, 200, 60);
+    self.btn.frame = CGRectMake(60, 280, 200, 60);
     self.btn.faceColor = [UIColor lightGrayColor];
     self.btn.sideColor = [UIColor darkGrayColor];
     self.btn.radius = 6.0;

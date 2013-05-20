@@ -12,6 +12,7 @@
 #import "CustomHeader.h"
 #import "ResultViewController.h"
 #import "CloudReview.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController (){
     NSString *_path;
@@ -27,6 +28,8 @@
 @property (nonatomic) BOOL canPushResult;//能否push结果页的标注
 @property (nonatomic) BOOL actionSheetShowed;//actionSheet是否出现
 @property (nonatomic) BOOL viewDidAppear;
+@property (nonatomic) BOOL shakeTaped;
+@property (nonatomic,strong) UIView *shakeView;
 
 @end
 
@@ -70,6 +73,18 @@
 
     self.myActionSheet = [[UIActionSheet alloc] initWithTitle:@"请选择" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"删除" otherButtonTitles:nil, nil];
     
+    //设置显示的shake图标
+    self.shakeView = [[UIView alloc] init];
+    self.shakeView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    [self.shakeView setFrame:CGRectMake(110, 100, 100, 100)];
+    self.shakeView.layer.cornerRadius = 6;
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ico_deco_shake"]];
+    [imageView setFrame:CGRectMake(0, 0, 100, 100)];
+    [self.shakeView addSubview:imageView];
+    self.shakeView.alpha = 0.0;
+    [self.view addSubview:self.shakeView];
+
+    
     self.myAccelerometer = [UIAccelerometer sharedAccelerometer];
     [self.myAccelerometer setDelegate:self];
 }
@@ -81,7 +96,7 @@
     static NSInteger shakeCount = 0;
     if (fabsf(acceleration.x) > 1.7 || fabsf(acceleration.y) > 1.7 || fabsf(acceleration.z > 1.7)) {
             shakeCount ++;
-            if (shakeCount > 2  && self.canPushResult == YES && self.actionSheetShowed == NO) {
+            if (shakeCount > 2  && self.canPushResult == YES && self.actionSheetShowed == NO && self.shakeTaped == YES) {
                 self.generatedString = [self generateAMeal];
                 if ([self.generatedString isEqualToString:@""] && self.alertShowed != YES)
                 {
@@ -233,7 +248,12 @@
     }
     return header;
 }
-- (IBAction)rate:(id)sender {
-    [[CloudReview sharedReview] reviewFor:627198697];
+- (IBAction)shake:(id)sender {
+    if (!self.shakeTaped) {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.shakeView.alpha = 1.0;
+        }];
+        self.shakeTaped = YES;
+        }
 }
 @end

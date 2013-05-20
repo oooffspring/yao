@@ -7,19 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import <NewRelicAgent/NewRelicAgent.h>
+#import "AibangApi.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [AibangApi setAppkey:@"f41c8afccc586de03a99c86097e98ccb"];
+    [NewRelicAgent startWithApplicationToken:@"AA826142fe59addd2824ceb51e6d6df37ac09a96aa"];
     return YES;
 }
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
