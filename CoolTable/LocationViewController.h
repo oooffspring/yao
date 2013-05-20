@@ -10,9 +10,10 @@
 #import <CoreLocation/CoreLocation.h>
 #import "AibangApi.h"
 
-@interface LocationViewController : UIViewController<CLLocationManagerDelegate>{
+@interface LocationViewController : UIViewController<CLLocationManagerDelegate,UITextFieldDelegate>{
     AibangApi *api;
 }
+@property (strong, nonatomic) IBOutlet UITextField *cityTextField;
 
 - (IBAction)sendRequest:(id)sender;
 

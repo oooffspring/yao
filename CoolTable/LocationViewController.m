@@ -9,7 +9,6 @@
 #import "LocationViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import "AppDelegate.h"
-#import "AFNetworking.h"
 
 @interface LocationViewController ()
 
@@ -32,6 +31,7 @@
 - (void)viewDidLoad
 {
     self.title = @"摇周边";
+    self.cityTextField.delegate = self;
     api = [[AibangApi alloc] init];
     api.delegate = self;
     [super viewDidLoad];
@@ -62,6 +62,11 @@
     self.location = [locations lastObject];
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -69,9 +74,8 @@
 }
 
 - (IBAction)sendRequest:(id)sender {
-    NSString *cityName = @"上海";
     NSString *bizName = @"";
-    [api searchBizWithCity:cityName
+    [api searchBizWithCity:self.cityTextField.text
                      Query:bizName
                    Address:@""
                   Category:@""
@@ -81,34 +85,20 @@
                   Rankcode:@"0"
                       From:@"1"
                         To:@"10"];
-    
-//    NSLog(@"%@",self.location);
-//    NSString *urlString = @"http://openapi.aibang.com/search?app_key=9943467fcd43a74d39b28f2c76d6703e&lng=116.337&lat=39.993&q=%E9%A4%90%E9%A6%86&alt=json";
-//    NSURL *url = [NSURL URLWithString:urlString];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON){
-//        NSLog(@"%@",JSON);
-//    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response,NSError *error, id JSON){
-//        NSLog(@"%@",error);
-//    }];
-//    
-//    [operation start];
-    //NSString *url = @"v1/metadata/get_categories_with_businesses";
-    //NSString *params = [NSString stringWithFormat:@"city=北京&region=海淀区&category=火锅&has_coupon=1&sort=2&limit=20"];
-    //NSString *params = [NSString stringWithFormat:@"latitude=%f&longitude=%f&category=火锅&sort=2&limit=20",self.location.coordinate.latitude,self.location.coordinate.longitude];
-    //[[[AppDelegate instance] dpapi] requestWithURL:url paramsString:nil delegate:self];
 }
 
 -(void) requestDidFinishWithData:(NSData*)data aibangApi:(id)aibangApi{
-    NSString *result = [[NSString alloc] initWithData:data
-                                             encoding:NSUTF8StringEncoding];
-    NSLog(@"%@",result);
+    NSError *error;
+    NSDictionary *resultDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    //NSLog(@"%@",result);
+    NSLog(@"%@",resultDictionary);
 }
 
 -(void) requestDidFailedWithError:(NSError*)error aibangApi:(id)aibangApi{
     NSLog(@"%@",error);//    textView.text = error.code;
 }
 - (void)viewDidUnload {
+    [self setCityTextField:nil];
     [super viewDidUnload];
 }
 @end
